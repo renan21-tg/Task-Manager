@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Manager</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" href="assets/images/icon.png" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,7 +14,7 @@
             <div class="menu">
                 <div class="logo">
                     <div class="logo-img">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28px" height="28px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="3" y="3" width="18" height="18" rx="4" ry="4"/>
                             <polyline points="7 9 9 11 12 8"/>
                             <line x1="14" y1="9" x2="17" y2="9"/>
@@ -35,5 +36,58 @@
             </div>
         </div>
     </header>
+
+    <section id="tasks">
+        <div class="container">
+            <div class="new-task">
+                <div class="new-task-title">
+                    <h2>Nova Tarefa</h2>
+                </div>
+
+                <div class="task-input">
+                    <label for="name" id="name">Nome</label>
+                    <input type="text" id="name"/>
+                </div>
+
+                <div class="task-input">
+                    <label for="category" id="category">Categoria</label>
+                    <input type="text" id="category" />
+                </div>
+
+                <div class="task-input">
+                    <label for="priority" id="priority">Prioridade</label>
+                    <input type="text">
+                </div>
+
+                <div class="task-input">
+                    <label for="date" id="date">Data Limite</label>
+                    <input type="date" name="date" id="date" />
+                </div>
+
+                <div class="btn">
+                    <button>Adicionar Tarefa</button>
+                </div>
+            </div>
+
+            <div class="all-tasks">
+                <div class="tasks-top">
+                    <div class="my-tasks"><h1>Minhas Tarefas</h1></div>
+
+                    <!--
+                    <div class="filters">
+                        <div class="category-filter">Filtrar por categoria</div>
+                        <div class="sort-by">Ordenar por</div>
+                    </div>
+                    -->
+                </div>
+
+                <div class="tasks-list">
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
