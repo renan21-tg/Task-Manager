@@ -41,37 +41,41 @@
         <div class="container">
             <div class="new-task">
                 <div class="new-task-title">
-                    <h2>Nova Tarefa</h2>
+                    Nova Tarefa
                 </div>
 
                 <div class="task-input">
-                    <label for="name" id="name">Nome</label>
-                    <input type="text" id="name"/>
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" id="name"/>
                 </div>
 
                 <div class="task-input">
-                    <label for="category" id="category">Categoria</label>
-                    <input type="text" id="category" />
+                    <label for="category">Categoria</label>
+                    <input type="text" name="category"" id="category" />
                 </div>
 
                 <div class="task-input">
-                    <label for="priority" id="priority">Prioridade</label>
-                    <input type="text">
+                    <label for="priority">Prioridade</label>
+                    <select name="priority" id="priority">
+                        <option value="baixa">Baixa</option>
+                        <option value="media">Média</option>
+                        <option value="alta">Alta</option>
+                    </select>
                 </div>
 
                 <div class="task-input">
-                    <label for="date" id="date">Data Limite</label>
+                    <label for="date">Data Limite</label>
                     <input type="date" name="date" id="date" />
                 </div>
 
                 <div class="btn">
-                    <button>Adicionar Tarefa</button>
+                    <button onclick="addTask()">Adicionar Tarefa</button>
                 </div>
             </div>
 
             <div class="all-tasks">
                 <div class="tasks-top">
-                    <div class="my-tasks"><h1>Minhas Tarefas</h1></div>
+                    <div class="my-tasks">Minhas Tarefas <span></span></div>
 
                     <!--
                     <div class="filters">
@@ -81,13 +85,28 @@
                     -->
                 </div>
 
-                <div class="tasks-list">
+                <div class="task-list">
                     <ul>
-
+                        <li>
+                            <div class="task-card">
+                                <div class="task-info">
+                                    <div class="task-title">Testar testes</div>
+                                    <div class="task-category">Testamentacao</div>
+                                    <div class="task-date">Data Limite: <span>24/09/2025</span></div>
+                                    <div class="task-btns">
+                                        <button class="done-btn">Marcar como Concluida</button>
+                                        <button class="delete-btn">Deletar Tarefa</button>
+                                    </div>
+                                </div>
+                                <div class="task-priority-icon">Alto</div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -22,7 +22,7 @@ body {
 header {
     display: flex;
     justify-content: space-around;
-    border-bottom: 3px solid #E2E8F0;
+    border-bottom: 2px solid #E2E8F0;
     margin-bottom: 32px;
 }
 
@@ -75,6 +75,7 @@ header {
 
 .new-task {
     width: 25%;
+
     border-radius: 24px;
     border: 1px solid #E2E8F0;
     padding: 24px;
@@ -83,6 +84,9 @@ header {
 
 .new-task-title {
     margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
 }
 
 .task-input {
@@ -91,7 +95,7 @@ header {
     margin-bottom: 16px;
 }
 
-.task-input input{
+.task-input input, .task-input select{
     border-radius: 4px;
     height: 32px;
     border: 1px solid #E2E8F0;
@@ -129,6 +133,18 @@ header {
 .tasks-top {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.my-tasks{
+    font-size: 26px;
+    font-weight: 500;
+    border-bottom: 2px solid #000;
+}
+
+.my-tasks span {
+    display: inline-block;
+    width: 28px;
 }
 
 .filters {
@@ -138,3 +154,72 @@ header {
 .category-filter {
     margin-right: 16px;
 }
+
+.task-list li {
+    list-style: none;
+}
+
+.task-card {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border: 1px solid #E2E8F0;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+.task-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.task-category {
+    margin-bottom: 12px;
+    color: #709ecc;
+    font-size: 13px;
+}
+
+.task-date {
+    color: #709ecc;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.task-date span {
+    font-size: 12px;
+    color: #000;
+}
+
+.task-btns {
+    box-sizing: border-box;
+}
+
+.done-btn {
+    margin-right: 8px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    background-color: #3B82F6;
+    border: none;
+    color: #F8FAFC;
+    transition: all 0.3s ease;
+}
+
+.delete-btn {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    background-color: #DBEAFE;
+    color: #1E40AF;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover, .done-btn:hover {
+    background-color: #3359d7;
+    color: #FFF;
+}
+
+
+
+/* 
+    - Mudar estilo caixa de selecao
+*/
