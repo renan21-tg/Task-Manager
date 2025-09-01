@@ -43,7 +43,6 @@
                 <div class="new-task-title">
                     Nova Tarefa
                 </div>
-
                 <div class="task-input">
                     <label for="name">Nome</label>
                     <input type="text" name="name" id="name"/>
@@ -51,15 +50,19 @@
 
                 <div class="task-input">
                     <label for="category">Categoria</label>
-                    <input type="text" name="category"" id="category" />
+                    <select name="category" id="category">
+                        <option value="Trabalho">Trabalho</option>
+                        <option value="Escola">Escola</option>
+                        <option value="Pessoal">Pessoal</option>
+                    </select>
                 </div>
 
                 <div class="task-input">
                     <label for="priority">Prioridade</label>
                     <select name="priority" id="priority">
-                        <option value="baixa">Baixa</option>
-                        <option value="media">Média</option>
-                        <option value="alta">Alta</option>
+                        <option value="Baixa">Baixa</option>
+                        <option value="Média">Média</option>
+                        <option value="Alta">Alta</option>
                     </select>
                 </div>
 
@@ -76,32 +79,14 @@
             <div class="all-tasks">
                 <div class="tasks-top">
                     <div class="my-tasks">Minhas Tarefas <span></span></div>
-
-                    <!--
                     <div class="filters">
                         <div class="category-filter">Filtrar por categoria</div>
-                        <div class="sort-by">Ordenar por</div>
+                        <div class="sort-by">Ordenar por Prioridade</div>
                     </div>
-                    -->
                 </div>
 
                 <div class="task-list">
-                    <ul>
-                        <li>
-                            <div class="task-card">
-                                <div class="task-info">
-                                    <div class="task-title">Testar testes</div>
-                                    <div class="task-category">Testamentacao</div>
-                                    <div class="task-date">Data Limite: <span>24/09/2025</span></div>
-                                    <div class="task-btns">
-                                        <button class="done-btn">Marcar como Concluida</button>
-                                        <button class="delete-btn">Deletar Tarefa</button>
-                                    </div>
-                                </div>
-                                <div class="task-priority-icon">Alto</div>
-                            </div>
-                        </li>
-                    </ul>
+                    <ul id="list"></ul>
                 </div>
             </div>
         </div>
