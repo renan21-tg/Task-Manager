@@ -41,5 +41,5 @@ function addTask () {
                         </li> `
     
     document.querySelector('#name').value = ' '
+    document.querySelector('#date').value = ' '
 }
-
