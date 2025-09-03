@@ -256,3 +256,19 @@ header {
 .task-card.task-done {
     opacity: 0.6;
 }
+
+.filters select {
+    border-radius: 4px;
+    height: 32px;
+    border: 1px solid #dfdfdf;
+    padding: 0 8px;
+}
+
+.filters {
+    display: flex;
+    align-items: center; 
+}
+
+.category-filter {
+    margin-right: 16px;
+}
