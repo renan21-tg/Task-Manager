@@ -15,16 +15,12 @@ function addTask () {
         let priorityColor = ''
 
         switch (taskPriority) {
-            case 'Alta':
-                priorityColor = 'high'
-                break
-            case 'Média':
-                priorityColor = 'medium'
-                break
-            case 'Baixa':
-                priorityColor = 'low'
-                break
+            case 'Alta': priorityColor = 'high'; break
+            case 'Média': priorityColor = 'medium'; break
+            case 'Baixa': priorityColor = 'low'; break
         }
+
+        let listItem = document.createElement('li')
 
         list.innerHTML += `<li>
                                 <div class="task-card">
@@ -47,3 +43,27 @@ function addTask () {
         document.querySelector('#date').value = ' '
     }
 }
+
+
+let taskList = document.getElementById('list')
+taskList.addEventListener('click', function(event) {
+    let clicked = event.target
+
+    // Concluir Task
+    if (clicked.classList.contains('done-btn')) {
+        let taskCard = clicked.closest('.task-card')
+        taskCard.classList.toggle('task-done')
+
+        let elementLi = clicked.closest('li')
+        let doneList = document.getElementById('done-list')
+        if (taskCard.classList.contains('task-done')) {
+            doneList.appendChild(elementLi)
+        }
+    }
+
+    // Deletar
+    if (clicked.classList.contains('delete-btn')) {
+        let listElement = clicked.closest('li')
+        listElement.remove()
+    }
+}) 

@@ -124,6 +124,12 @@ header {
     border-radius: 6px;
     color: rgba(255, 255, 255, 0.8);
     font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn button:hover {
+    transform: scale(1.03);
 }
 
 .all-tasks {
@@ -202,6 +208,7 @@ header {
     border: none;
     color: #F8FAFC;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .delete-btn {
@@ -211,6 +218,7 @@ header {
     background-color: #DBEAFE;
     color: #1E40AF;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .delete-btn:hover, .done-btn:hover {
@@ -241,7 +249,10 @@ header {
     color: #166534;
 }
 
+.task-card.task-done .task-title {
+    text-decoration: line-through;
+}
 
-/* 
-    - Mudar estilo caixa de selecao
-*/
+.task-card.task-done {
+    opacity: 0.6;
+}
