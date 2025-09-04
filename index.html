@@ -27,7 +27,7 @@
 
                 <div class="side-menu">
                     <div class="pending-tasks"><strong id="pending-tasks">0</strong> Tarefas restantes</div>
-                    <div class="theme">
+                    <div class="theme" id="theme-toggle">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                         </svg>
@@ -51,7 +51,7 @@
                 <div class="task-input">
                     <label for="category">Categoria</label>
                     <select name="category" id="category">
-                        <option value="">Selecione a Categoria</option>
+                        <option value="" disabled selected hidden>Selecione a Categoria</option>
                         <option value="Trabalho">Trabalho</option>
                         <option value="Escola">Escola</option>
                         <option value="Pessoal">Pessoal</option>
@@ -61,7 +61,7 @@
                 <div class="task-input">
                     <label for="priority">Prioridade</label>
                     <select name="priority" id="priority">
-                        <option value="">Selecione a Prioridade</option>
+                        <option value="" disabled selected hidden>Selecione a Prioridade</option>
                         <option value="Baixa">Baixa</option>
                         <option value="Média">Média</option>
                         <option value="Alta">Alta</option>
@@ -94,6 +94,7 @@
                             <select id="sort-by-select">
                                 <option value="default">Ordenar por</option>
                                 <option value="priority">Prioridade</option>
+                                <option value="date">Data Limite</option>
                             </select>
                         </div>
                     </div>
