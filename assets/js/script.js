@@ -27,7 +27,7 @@ function addTask () {
             case 'Baixa': priorityColor = 'low'; break
         }
 
-        list.innerHTML += `<li>
+        list.innerHTML += `<li data-category${taskCategory}>
                                 <div class="task-card">
                                     <div class="task-info">
                                         <div class="task-title">${taskName}</div>
@@ -99,4 +99,15 @@ let themeToggle = document.getElementById('theme-toggle')
 themeToggle.addEventListener('click', function() {
     let body = document.querySelector('body')
     body.classList.toggle('dark-mode')
+    
+    let moon = document.getElementById('moon')
+    let sun = document.getElementById('sun')
+
+    if (sun.classList.contains('no-display')) {
+        sun.classList.toggle('no-display')
+        moon.classList.toggle('no-display')
+    } else {
+        sun.classList.toggle('no-display')
+        moon.classList.toggle('no-display')
+    }
 })
