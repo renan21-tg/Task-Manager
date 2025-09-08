@@ -57,7 +57,7 @@ function addTask() {
     document.querySelector('#priority').selectedIndex = 0;
 
     updateTaskCount();
-    filterAndSortTasks(); // Atualiza a exibição após adicionar a tarefa
+    filterAndSortTasks();
 }
 
 let taskList = document.getElementById('list');
